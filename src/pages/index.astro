@@ -12,39 +12,49 @@ import Card from "../components/react/Card"
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
-<body class="font-">
+<body >
   <div class="text-center "><p class="bg-amber-900 text-white p-1">Si tu compra supera los 40$ tu envio sera gratis</p></div>
 	
   <Navbar/>
 
   <!-- Inicio de Carrusel -->
 	<div class="carousel h-130 w-full">
-  <div id="item1" class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-      class="w-full" />
-  </div>
-  <div id="item2" class="carousel-item w-full">
+  <div id="slide1" class="carousel-item relative w-full">
     <img
       src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
       class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide4" class="btn btn-circle ">❮</a>
+      <a href="#slide2" class="btn btn-circle">❯</a>
+    </div>
   </div>
-  <div id="item3" class="carousel-item w-full">
+  <div id="slide2" class="carousel-item relative w-full">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+      class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide1" class="btn btn-circle">❮</a>
+      <a href="#slide3" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide3" class="carousel-item relative w-full">
     <img
       src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
       class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide2" class="btn btn-circle">❮</a>
+      <a href="#slide4" class="btn btn-circle">❯</a>
+    </div>
   </div>
-  <div id="item4" class="carousel-item w-full">
+  <div id="slide4" class="carousel-item relative w-full">
     <img
       src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
       class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide3" class="btn btn-circle">❮</a>
+      <a href="#slide1" class="btn btn-circle">❯</a>
+    </div>
   </div>
-</div>
-<div class="flex w-full justify-center gap-2 py-2">
-  <a href="#item1" class="btn btn-xs">1</a>
-  <a href="#item2" class="btn btn-xs">2</a>
-  <a href="#item3" class="btn btn-xs">3</a>
-  <a href="#item4" class="btn btn-xs">4</a>
 </div>
 <!-- Fin de Carrusel -->
 
