@@ -1,0 +1,46 @@
+---
+
+---
+
+<!-- Estructura HTML del Swiper -->
+<div class="swiper h-100">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"> <img alt="imagen 1"> </div>
+    <div class="swiper-slide"> <img alt="imagen 2"> </div>
+    <div class="swiper-slide"> <img alt="imagen 3"> </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<!-- Los estilos se cargan desde el CDN, porque no supe hacerlo importandolo :( -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+></script>
+
+<!-- Inicializa el Swiper -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        pauseOnMouseEnter: true
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
