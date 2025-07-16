@@ -8,7 +8,7 @@ import Carrusel_productos from "../components/react/Carrusel_productos";
   <Layout title="PackeJson"> 
   <div class="text-center "><p class="bg-amber-900 text-white p-1">Si tu compra supera los 40$ tu envio sera gratis</p></div>
 	
-  <Carrusel/>
+  <Carrusel client:load/>
 
     <div class="p-6 text-left">
       <h2 class="font-bold text-4xl">Classics</h2>
@@ -16,6 +16,6 @@ import Carrusel_productos from "../components/react/Carrusel_productos";
     </div>
 
     <!-- Aqui se van a cargar las cards cuando se tenga la Api, la idea es que queden deslizandose a un lado como un carrusel -->
-    <Carrusel_productos/>
+    <Carrusel_productos client:load/>
     </Layout>
 
