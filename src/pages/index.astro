@@ -1,35 +1,21 @@
 ---
 import "../assets/app.css";
-import Header from "../components/astro/Header.astro";
-import Card from "../components/react/Card";
-import Carrusel from "../components/astro/carrusel.astro";
+import Carrusel from "../components/astro/Carrusel.astro";
+import Layout from "../layouts/Layout.astro";
+import Carrusel_productos from "../components/react/Carrusel_productos";
+
 ---
+  <Layout title="PackeJson"> 
+  <div class="text-center "><p class="bg-amber-900 text-white p-1">Si tu compra supera los 40$ tu envio sera gratis</p></div>
+	
+  <Carrusel/>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body class="font-">
-    <div class="text-center">
-      <p class="bg-amber-900 text-white p-1">
-        Si tu compra supera los 40$ tu envio sera gratis
-      </p>
-    </div>
-
-    <Header />
-    <Carrusel />
-
-    <div class="pt-5 text-left">
-      <h1 class="font-bold text-3xl text-gray-900">Classics</h1>
-      <p class="text-gray-600 text-lg mt-1">Nuestros Artículos más vendidos</p>
+    <div class="p-6 text-left">
+      <h2 class="font-bold text-4xl">Classics</h2>
+      <p class="text-gray-600 text-lg">Nuestros Artículos más vendidos</p>
     </div>
 
     <!-- Aqui se van a cargar las cards cuando se tenga la Api, la idea es que queden deslizandose a un lado como un carrusel -->
-    <div>
-      <Card />
-    </div>
-  </body>
-</html>
+    <Carrusel_productos/>
+    </Layout>
+

@@ -1,39 +1,46 @@
-<!-- Inicio de Carrusel -->
-<div class="carousel h-130 w-full">
-  <div id="item1" class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-      class="w-full"
-    />
-  </div>
-  <div id="item2" class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-      class="w-full"
-    />
-  </div>
-  <div id="item3" class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-      class="w-full"
-    />
-  </div>
-  <div id="item4" class="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-      class="w-full"
-    />
-  </div>
-</div>
-<div class="flex w-full justify-center gap-2 py-2">
-  <a href="#item1" class="btn btn-xs">1</a>
-  <a href="#item2" class="btn btn-xs">2</a>
-  <a href="#item3" class="btn btn-xs">3</a>
-  <a href="#item4" class="btn btn-xs">4</a>
-</div>
-<!-- Fin de Carrusel -->
+---
 
-<div class="pt-5 text-left">
-  <h1 class="font-bold text-3xl text-gray-900">Classics</h1>
-  <p class="text-gray-600 text-lg mt-1">Nuestros Artículos más vendidos</p>
+---
+
+<!-- Estructura HTML del Swiper -->
+<div class="swiper h-100">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"> <img alt="imagen 1"> </div>
+    <div class="swiper-slide"> <img alt="imagen 2"> </div>
+    <div class="swiper-slide"> <img alt="imagen 3"> </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 </div>
+
+<!-- Los estilos se cargan desde el CDN, porque no supe hacerlo importandolo :( -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+></script>
+
+<!-- Inicializa el Swiper -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        pauseOnMouseEnter: true
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
