@@ -2,16 +2,14 @@
 import Header from "../components/astro/Header.astro";
 // Supports weights 100-900
 import '@fontsource-variable/onest';
-
 interface Props {
-	title: string
+	title: string;
+	showHeader: boolean;
 }
+const { showHeader = true } = Astro.props;
 
 const {title} = Astro.props;
 ---
-
-
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -22,7 +20,7 @@ const {title} = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header/>
+		{showHeader && <Header />}
 		<slot />
 	</body>
 </html>
